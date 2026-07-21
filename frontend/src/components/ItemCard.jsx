@@ -1,16 +1,8 @@
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const ItemCard = ({ item }) => {
-  const navigate = useNavigate();
   return (
-    <div
-      className="group cursor-pointer "
-      onClick={() => {
-        navigate(`product/${item._id}`, {
-          replace: true,
-        });
-      }}
-    >
+    <Link to={`/product/${item._id}`} className="group cursor-pointer ">
       <div className="overflow-hidden bg-gray-100">
         <img
           src={item?.images?.[0]}
@@ -24,7 +16,7 @@ const ItemCard = ({ item }) => {
 
         <p className="mt-2 font-medium">${item.price}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
