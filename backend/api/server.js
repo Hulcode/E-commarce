@@ -25,8 +25,11 @@ app.use(
     credentials: true,
   }),
 );
-await connectDB();
-connectCloudinary();
+(async () => {
+  await connectDB();
+  connectCloudinary();
+})();
+
 app.use(express.json());
 app.use("/api/user", userRouter);
 app.use("/api/product", productRouter);
