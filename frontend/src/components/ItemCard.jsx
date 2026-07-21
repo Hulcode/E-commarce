@@ -6,7 +6,9 @@ const ItemCard = ({ item }) => {
     <div
       className="group cursor-pointer "
       onClick={() => {
-        navigate(`product/${item._id}`);
+        navigate(`product/${item._id}`, {
+          replace: true,
+        });
       }}
     >
       <div className="overflow-hidden bg-gray-100">
