@@ -1,7 +1,7 @@
-const userRouter = require("./routes/userRouter");
-const productRouter = require("./routes/productRouter");
-const cartRouter = require("./routes/cartRouter");
-const orderRouter = require("./routes/orderRouter");
+const userRouter = require("../routes/userRouter");
+const productRouter = require("../routes/productRouter");
+const cartRouter = require("../routes/cartRouter");
+const orderRouter = require("../routes/orderRouter");
 const cookieParser = require("cookie-parser");
 
 const express = require("express");
