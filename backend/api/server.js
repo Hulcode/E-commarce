@@ -10,7 +10,7 @@ const cors = require("cors");
 
 const mongoose = require("mongoose");
 const connectDB = require("../config/DB");
-const connectCloudinary = require("./config/cloudinary");
+const connectCloudinary = require("../config/cloudinary");
 
 dotenv.config();
 
