@@ -104,7 +104,13 @@ async function logout(req, res) {
   });
 }
 async function me(req, res) {
-  const user = await User.findById(req.user.id);
+  const user = await User.findById(req.user.id).select("-password");
+  if (!user) {
+    return res.status(404).json({
+      success: false,
+      message: "User not found",
+    });
+  }
 
   return res.status(200).json({
     success: true,
